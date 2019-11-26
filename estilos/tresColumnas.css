@@ -15,20 +15,12 @@ header {
     padding: 0;
     display: flex;
     height: top;
-    font-size: 590%;
-    transform: rotate(-4deg);
 }
 #registrar{
     margin-top: 1%;
     margin-left: 5%;
     float: left;
 }
-#cabecera img{
-    width: 14%;
-    margin: auto;
-    margin-top: 3%;
-    margin-right: 42%;
-}   
 #menu{
     width: auto;
     margin-left: 20%;
@@ -104,6 +96,49 @@ header {
     left: 31%;
     top: 33%;
     margin-bottom: 1%;
+}
+#info1{
+    border-radius: 10px 10px 10px 10px;
+    margin-left: 22%;
+    margin-right: 1%;
+    height: auto;
+    width: 56%;
+    margin-top: 12.5%;
+    float: left;
+    left: 31%;
+    top: 33%;
+    margin-bottom: 1%;
+}
+#info1 img{
+    margin-right: 12%;
+}
+#info2{
+    border-radius: 10px 10px 10px 10px;
+    margin-left: 22%;
+    margin-right: 1%;
+    height: auto;
+    width: 56%;
+    float: left;
+    left: 31%;
+    top: 33%;
+    margin-bottom: 1%;
+}
+#info2 img{
+    margin-right: 15%;
+}
+#info3{
+    border-radius: 10px 10px 10px 10px;
+    margin-left: 22%;
+    margin-right: 1%;
+    height: auto;
+    width: 56%;
+    float: left;
+    left: 31%;
+    top: 33%;
+    margin-bottom: 1%;
+}
+#info3 img{
+    margin-right: 15%;
 }
 #info p{
     margin-left: 10px;

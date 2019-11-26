@@ -49,6 +49,27 @@ header {
     font-size: 1.2rem;
     line-height: 1.4em;
 }
+#info1{
+    background: rgb(118, 155, 223);
+    box-shadow: 1px 1px 5px #000;
+    font-family: Georgia, Times, serif;
+    font-size: 1.2rem;
+    line-height: 1.4em;
+}
+#info2{
+    background: rgb(118, 155, 223);
+    box-shadow: 1px 1px 5px #000;
+    font-family: Georgia, Times, serif;
+    font-size: 1.2rem;
+    line-height: 1.4em;
+}
+#info3{
+    background: rgb(118, 155, 223);
+    box-shadow: 1px 1px 5px #000;
+    font-family: Georgia, Times, serif;
+    font-size: 1.2rem;
+    line-height: 1.4em;
+}
 #lateral{
     background: rgb(118, 155, 223);
     box-shadow: 1px 1px 5px #000;
