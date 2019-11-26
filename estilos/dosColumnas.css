@@ -1,0 +1,91 @@
+header {
+    border-radius: 10px 10px 10px 10px;
+    margin-top: 0;
+    margin-left: 1%;
+    margin-right: 1%;
+    height: 24%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+#cabecera{
+    margin: 0;
+    margin-left: 32%;
+    padding: 0;
+    display: flex;
+    height: top;
+    font-size: 590%;
+    transform: rotate(-4deg);
+}
+#registrar{
+    margin-top: 1%;
+    margin-left: 5%;
+    float: left;
+}
+#cabecera img{
+    width: 14%;
+    margin: auto;
+    margin-top: 3%;
+    margin-right: 42%;
+}   
+#redes{
+    float: right;
+    width: 19%;
+    margin-top: -6%;
+}
+#redes a{
+    padding: 22% 2% 2%;
+}
+#menu{
+    width: auto;
+    margin-left: 20%;
+    padding-top: 0%;
+}
+#cuerpo{
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+#publicidad{
+    border-radius: 10px 10px 10px 10px;
+    position: fixed;
+    left: 1%;
+    top: 26%;
+    margin-left: 0%;
+    margin-right: 0;
+    margin-bottom: 1%;
+    height: 65%;
+    width: 20%;
+}
+#publicidad h2, iframe{
+    margin-left: 1%;
+}
+#publicidad ul li a{
+    color: #000;
+    text-decoration: none;
+    font: bold 20px Verdana;
+    border-bottom: 6px solid transparent;
+    transition: border-bottom .3s;
+}
+#info{
+    border-radius: 10px 10px 10px 10px;
+    float: left;
+    margin-left: 22%;
+    margin-right: 1%;
+    height: auto;
+    width: 77.48%;
+    margin-bottom: 1%;
+    margin-top: 12.56%;
+}
+#info p{
+    margin-left: 1%;
+    margin-right: 1%;
+}
+#info img{
+    float: left;
+    margin-right: 1%;
+    margin-top: 1%;
+}
+.footer {
+    clear: both;
+}

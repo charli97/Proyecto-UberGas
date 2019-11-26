@@ -1,0 +1,130 @@
+header {
+    border-radius: 10px 10px 10px 10px;
+    margin-top: 0;
+    margin-left: 1%;
+    margin-right: 1%;
+    height: 24%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+#cabecera{
+    margin: 0;
+    margin-left: 32%;
+    padding: 0;
+    display: flex;
+    height: top;
+    font-size: 590%;
+    transform: rotate(-4deg);
+}
+#registrar{
+    margin-top: 1%;
+    margin-left: 5%;
+    float: left;
+}
+#cabecera img{
+    width: 14%;
+    margin: auto;
+    margin-top: 3%;
+    margin-right: 42%;
+}   
+#menu{
+    width: auto;
+    margin-left: 20%;
+    padding-top: 0%;
+}
+#redes{
+    float: right;
+    width: 19%;
+    margin-top: -6%;
+}
+#redes a{
+    padding: 22% 2% 2%;
+}
+#cuerpo{
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+#publicidad{
+    border-radius: 10px 10px 10px 10px;
+    position: fixed;
+    left: 1%;
+    top: 26%;
+    margin-left: 0%;
+    margin-bottom: 1%;
+    margin-right: 0;
+    height: 65%;
+    width: 20%;
+}
+#publicidad .twitter-timeline{
+    margin-left: 2%;
+}
+#info table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+#info table{
+    margin-left: 25%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+#info table .si{
+    background: green;
+}
+#info table .no{
+    background: red;
+}
+#info #mapa{
+    float: left; 
+}
+#info #mapa img{
+    height: 4rem;
+    width: 5;
+}
+#info #cont{
+    margin-top: 7%;
+}
+#info form #area{
+    height: 10em;
+    width: 77em;
+    margin-left: 1%;
+}
+#info form #ema{
+    margin-left: 2%;
+}
+#info{
+    border-radius: 10px 10px 10px 10px;
+    margin-left: 22%;
+    margin-right: 1%;
+    height: auto;
+    width: 56%;
+    margin-top: 12.5%;
+    float: left;
+    left: 31%;
+    top: 33%;
+    margin-bottom: 1%;
+}
+#info p{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#info img{
+    float: left;
+    margin-right: 1%;
+    margin-top: 1%;
+}
+#lateral{
+    border-radius: 10px 10px 10px 10px;
+    position: fixed;
+    top: 26%;
+    left: 79%;
+    margin-bottom: 1%;
+    margin-left: 0%;
+    margin-right: 0;
+    height: 65%;
+    width: 20%;
+}
+.footer {
+    clear: both;
+}
