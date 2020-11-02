@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-11-01T21:57:17.645Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 OPR/71.0.3770.284" etag="n5ZCsDRNa6FyLI_pbhPl" version="13.8.6" type="github">
+<mxfile host="app.diagrams.net" modified="2020-11-02T00:37:39.717Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 OPR/71.0.3770.284" etag="BsvMBfECcoew-bOSIDhd" version="13.8.6" type="github">
   <diagram id="KFKT6yV8iZlIxl5REy6F" name="Page-1">
     <mxGraphModel dx="742" dy="508" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -286,16 +286,16 @@
           <mxGeometry y="164" width="190" height="26" as="geometry" />
         </mxCell>
         <mxCell id="FMYxJ3LY-Asu8vdF3Ua0-94" value="public class VentanaIngresoTicket {&lt;br&gt;&lt;br&gt;private void guardar(){&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;int numeroTicket = Integer.parseInt(txtNumero.getText());&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;String placa = txtPlaca.getText();&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;String marca = txtMarca.getText();&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;String color = txtColor.getText();&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;boolean estado = gestionTicketON.registarIngreso(numeroTicket, placa, marca, modelo)&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;if(estado==true){&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;JOptionPane.showMessage(&quot;Guardado OK&quot;);&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;}else{&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;JOptionPane.showMessage(&quot;Error al guardar&quot;);&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;}&lt;br&gt;}" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=top;align=left;spacingTop=-6;fillColor=#E1D5E7;" vertex="1" parent="1">
-          <mxGeometry x="1348" y="886" width="510" height="224" as="geometry" />
+          <mxGeometry x="820" y="1530" width="510" height="224" as="geometry" />
         </mxCell>
         <mxCell id="FMYxJ3LY-Asu8vdF3Ua0-95" value="public class GestionTicketsON {&lt;br&gt;&lt;br&gt;private boolean registrarIngreso(String numero, String placa, String marca, String modelo){&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;Vehiculo v = vehiculoDAO.read(placa);&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;if(v==null){&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;v = new Vehiculo(placa, marca, modelo);&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;vehiculoDAO.insert(v);&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;}else{&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;v.setMarca(marca);&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;v.setColor(color);&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;vehiculoDAO.update(v);&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;}&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;Ticket t = new Ticket(numero, v);&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; t.setFechaIngreso(new Date());&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; return ticketDAO.insert(t);&lt;br&gt;}&lt;br&gt;&lt;br&gt;}" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=top;align=left;spacingTop=-6;fillColor=#E1D5E7;" vertex="1" parent="1">
-          <mxGeometry x="1348" y="1140" width="510" height="270" as="geometry" />
+          <mxGeometry x="820" y="1784" width="510" height="270" as="geometry" />
         </mxCell>
         <mxCell id="FMYxJ3LY-Asu8vdF3Ua0-96" value="public class TicketDAO {&lt;br&gt;&lt;br&gt;private boolean insert(Ticket ticket){&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;String dml = &quot;INSERT INTO Ticket(codigo, placa_vehiculo, fecha_ingreso VALUES (?, ?, ?)&quot;;&lt;br&gt;&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;try{&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; PreparementStament ps = con.getStament();&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;ps.setQuery(dml);&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;ps.setParameter(1, ticket.getCodigo());&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;ps.setParameter(2, ticket.getVehiculo().getPlaca();&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;ps.setParameter(3, new Date());&lt;br&gt;&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;ps.executeUpdate();&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;return boolean;&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;}catch(Exception e){&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;System.out.println(e.printStrackTrace());&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;return false;&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;}&lt;br&gt;&lt;br&gt;}&lt;br&gt;&lt;br&gt;}" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=top;align=left;spacingTop=-6;fillColor=#E1D5E7;" vertex="1" parent="1">
-          <mxGeometry x="1351" y="1440" width="590" height="270" as="geometry" />
+          <mxGeometry x="755" y="2110" width="590" height="270" as="geometry" />
         </mxCell>
         <mxCell id="FMYxJ3LY-Asu8vdF3Ua0-97" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="730" y="779" width="590" height="260" as="geometry" />
+          <mxGeometry x="730" y="779" width="580" height="391" as="geometry" />
         </mxCell>
         <mxCell id="FMYxJ3LY-Asu8vdF3Ua0-98" value="cliente" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="760" y="810" width="40" height="20" as="geometry" />
@@ -308,6 +308,42 @@
         </mxCell>
         <mxCell id="FMYxJ3LY-Asu8vdF3Ua0-102" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="820" y="844" width="180" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="FMYxJ3LY-Asu8vdF3Ua0-103" value="FechaEmision" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="760" y="880" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="FMYxJ3LY-Asu8vdF3Ua0-104" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="830" y="880" width="180" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="FMYxJ3LY-Asu8vdF3Ua0-105" value="cliente" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="760" y="912" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="FMYxJ3LY-Asu8vdF3Ua0-107" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="830" y="920" width="180" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="FMYxJ3LY-Asu8vdF3Ua0-108" value="calcular" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="876" width="110" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="FMYxJ3LY-Asu8vdF3Ua0-109" value="pago" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="842" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="FMYxJ3LY-Asu8vdF3Ua0-140" value="valor total" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1025" y="1090" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="FMYxJ3LY-Asu8vdF3Ua0-141" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="1084" width="120" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="FMYxJ3LY-Asu8vdF3Ua0-143" value="tipo_documento" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="760" y="954" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="FMYxJ3LY-Asu8vdF3Ua0-144" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="830" y="954" width="180" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="FMYxJ3LY-Asu8vdF3Ua0-145" value="nombre" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="760" y="990" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="FMYxJ3LY-Asu8vdF3Ua0-146" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="830" y="998" width="180" height="26" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
